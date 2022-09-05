@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Simple JSON Object</title>
+	</head>
+	<body>
+		<div id="demo"></div>
+		
+		<script>
+			var obj = {
+				"name" : "Nitesh Pandey",
+				"age" : 27,
+				"company" : "Incedo",
+				"id" : 605772,
+				"skills" : {
+					"skill1" : "HTML5",
+					"skill2" : "CSS3",
+					"skill3" : "Bootstrap",
+					"skill4" : "jQuery"
+				}
+			}
+			var value = " ";
+			for(let x in obj) {
+				if(typeof(obj[x]) == "object"){
+					for(let y in obj[x]) {
+						console.log(obj[x][y]);
+						value +=  obj[x][y] + " ";
+					}
+				} else {
+					value += obj[x] + " ";
+				}
+			}
+			document.getElementById("demo").innerHTML = value;
+		</script>
+	</body>
+</html>

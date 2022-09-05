@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Simple JSON Object</title>
+	</head>
+	<body>
+		<div id="demo"></div>
+		
+		<script>
+			var obj = {
+				"name" : "Nitesh Pandey",
+				"age" : 27,
+				"company" : "Incedo",
+				"id" : 605772,
+				"skills" : ["HTML5","CSS3","Bootstrap","jQuery"]
+			}
+			var data = " ";
+			for(i in obj.skills) {
+				data += obj.skills[i] + " ";
+			}
+			document.getElementById("demo").innerHTML = data;
+		</script>
+	</body>
+</html>

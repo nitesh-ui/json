@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Simple JSON Object</title>
+	</head>
+	<body>
+		<div id="demo"></div>
+		
+		<script>
+			var myCars = [
+				{"name": "Maruti", "modal" : 
+										["Alto","Baleno","WagonR"]
+				},
+				{"name": "Honda", "modal" : 
+										["City","Civic"]
+				},
+				{"name": "Hyundai", "modal" : 
+										["i10","i20","Creta"]
+				}
+			]
+			var obj = {
+				"name" : "Nitesh Pandey",
+				"age" : 27,
+				"company" : "Incedo",
+				"id" : 605772,
+				"cars" : myCars
+			}
+			var data = " ";
+			for(i in obj.cars) {
+				data += "<h3>" + obj.cars[i].name + " </h3><br/>";
+				for(j in obj.cars[i].modal) {
+					data += obj.cars[i].modal[j] + " ";
+				}
+			}
+			document.getElementById("demo").innerHTML = data;
+		</script>
+	</body>
+</html>
